@@ -15,15 +15,6 @@ public class ExampleJobService extends JobService implements OnResponseListener 
     private JobParameters parameters = null;
     private SharedPreferences sharedPreferences ;
 
-    /*@Override
-    public boolean onStartJob(JobParameters params) {
-        Log.d(TAG, "Job Start");
-        sharedPreferences = getSharedPreferences("PREFS", MODE_PRIVATE) ;
-        this.parameters = params ;
-        startBackgroundJob(params);
-        return true;
-    }*/
-
     private void startBackgroundJob() {
         new Thread(new Runnable() {
             @Override
@@ -47,12 +38,6 @@ public class ExampleJobService extends JobService implements OnResponseListener 
         }).start();
     }
 
-    /*@Override
-    public boolean onStopJob(JobParameters params) {
-        Log.d(TAG, "Job Cancled Before Finished") ;
-        jobCanclled = true ;
-        return true;
-    }*/
 
     @Override
     public void onResponseSuccess(String msg) {
