@@ -32,8 +32,6 @@ public class ExampleJobService extends JobService implements OnResponseListener 
                 }
                 jobFinished(parameters, false);
                 sharedPreferences.edit().putBoolean("JOBTASK", true).apply();
-                /*ProcessSync processSync = new ProcessSync(ExampleJobService.this);
-                processSync.parseData();*/
             }
         }).start();
     }

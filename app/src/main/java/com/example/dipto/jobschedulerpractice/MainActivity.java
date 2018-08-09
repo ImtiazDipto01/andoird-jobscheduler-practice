@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         startJob = findViewById(R.id.btn_start_job) ;
 
         startJob.setOnClickListener(new View.OnClickListener() {
-            //@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 startJobSchedule();
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void startJobSchedule() {
 
         /*ComponentName componentName = new ComponentName(MainActivity.this, ExampleJobService.class);
